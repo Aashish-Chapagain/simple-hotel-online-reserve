@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Bed, Hotel } from 'lucide-react';
+import { Bed, MessageCircle } from 'lucide-react';
 
 const rooms = [
   {
@@ -33,6 +32,18 @@ const rooms = [
 ];
 
 const RoomsSection = () => {
+  // Replace with your actual WhatsApp number (include country code without + sign)
+  const whatsappNumber = "1234567890"; // Example: "919876543210" for Indian number
+  
+  const handleBookNow = (room) => {
+    const message = `Hi! I'm interested in booking the ${room.name} at ₹${room.price}/night. Could you please provide more details about availability and booking process?`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -87,13 +98,23 @@ const RoomsSection = () => {
                     ₹{room.price}
                     <span className="text-sm text-gray-500 font-normal">/night</span>
                   </div>
-                  <Button className="bg-amber-600 hover:bg-amber-700 text-white rounded-full px-6">
+                  <Button 
+                    onClick={() => handleBookNow(room)}
+                    className="bg-amber-600 hover:bg-amber-700 text-white rounded-full px-6 flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                  >
+                    <MessageCircle className="h-4 w-4" />
                     Book Now
                   </Button>
                 </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-gray-600">
+            Click "Book Now" to send us a message on WhatsApp for instant booking assistance!
+          </p>
         </div>
       </div>
     </section>

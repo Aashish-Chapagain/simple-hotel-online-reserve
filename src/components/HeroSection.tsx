@@ -21,9 +21,12 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Experience luxury and comfort in the heart of the city. Where exceptional hospitality meets modern elegance.
           </p>
+          <a href="#rooms">
+
           <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg rounded-full transition-all duration-300 hover:scale-105">
             Explore Our Rooms
           </Button>
+          </a>
         </div>
 
         <div className="max-w-4xl mx-auto">

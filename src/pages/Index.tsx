@@ -10,7 +10,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection />
+      <div id='rooms'>
+
       <RoomsSection />
+      </div>
       <FeaturesSection />
       <HospitalitySection />
       <Footer />
