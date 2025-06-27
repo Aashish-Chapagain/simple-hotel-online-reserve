@@ -33,7 +33,7 @@ const rooms = [
 
 const RoomsSection = () => {
   // Replace with your actual WhatsApp number (include country code without + sign)
-  const whatsappNumber = "1234567890"; // Example: "919876543210" for Indian number
+  const whatsappNumber = "9766728306"; // Example: "919876543210" for Indian number
   
   const handleBookNow = (room) => {
     const message = `Hi! I'm interested in booking the ${room.name} at ₹${room.price}/night. Could you please provide more details about availability and booking process?`;
