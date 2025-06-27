@@ -26,8 +26,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
-              <p>123 Palace Street, City Center</p>
-              <p>Phone: +91 98765 43210</p>
+              <p>The Palm Building, Butwal</p>
               <p>Email: info@grandpalace.com</p>
               <p>24/7 Reception & Support</p>
             </div>
